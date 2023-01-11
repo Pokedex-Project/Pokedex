@@ -230,8 +230,21 @@ html {
   font-family: "pokemonFont";
   src: url(../pokemon-fonts/pokemon-hollow.woff) format("woff");
   src: url(../pokemon-fonts/pokemon-hollow.woff2) format("woff2");
+  src: url(../pokemon-fonts/pokemon-solid.woff) format("woff");
+  src: url(../pokemon-fonts/pokemon-solid.woff2) format("woff2");
 }
-html {
+h1 {
   font-family: "pokemonFont";
   text-align: center;
+  font-size: 800%;
+  color: #ffcb05;
+  -webkit-text-stroke: 2px #2a75bb;
+}
+
+h2 {
+  font-family: "pokemonFont";
+  text-align: center;
+  font-size: 500%;
+  color: lightgoldenrodyellow;
+  -webkit-text-stroke: 2px rgb(165, 78, 78);
 }
