@@ -1,9 +1,12 @@
+@use 'variables' as *;
+
 @font-face {
-    font-family: pokemonFont;
-    src: url(pokmon/pokemon-hollow.ttf) format("truetype");
+    font-family: "pokemonFont";
+    src: url(#{$asset_path}/pokemon-hollow.woff) format("woff");
+    src: url(#{$asset_path}/pokemon-hollow.woff2) format("woff2");
 }
 
-h2 {
-    font-family: pokemonFont;
+html {
+    font-family: "pokemonFont";
     text-align: center;
 }

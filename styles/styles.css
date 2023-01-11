@@ -227,10 +227,11 @@ html {
 }
 
 @font-face {
-  font-family: pokemonFont;
-  src: url(pokmon/pokemon-hollow.ttf) format("truetype");
+  font-family: "pokemonFont";
+  src: url(../pokemon-fonts/pokemon-hollow.woff) format("woff");
+  src: url(../pokemon-fonts/pokemon-hollow.woff2) format("woff2");
 }
-h2 {
-  font-family: pokemonFont;
+html {
+  font-family: "pokemonFont";
   text-align: center;
 }
