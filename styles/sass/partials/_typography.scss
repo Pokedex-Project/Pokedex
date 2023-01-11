@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+@font-face {
+    font-family: 'pokeFont_hollow';
+    src: url(#{$asset_path}/pokemon_hollow.woff) format('woff');
+    src: url(#{$asset_path}/pokemon_hollow.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'pokeFont_solid';
+    src: url(#{$asset_path}/pokemon_solid.woff) format('woff');
+    src: url(#{$asset_path}/pokemon_solid.woff2) format('woff2');
+}
+
+html{
+    font-size: 125%;
+    font-family: 'pokeFont_hollow';
+}
