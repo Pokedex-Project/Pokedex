@@ -228,17 +228,26 @@ html {
 
 @font-face {
   font-family: "pokeFont_hollow";
-  src: url(../assets/pokemon_hollow.woff) format("woff");
-  src: url(../assets/pokemon_hollow.woff2) format("woff2");
+  src: url(../fonts/pokemon_hollow.woff) format("woff");
+  src: url(../fonts/pokemon_hollow.woff2) format("woff2");
 }
 @font-face {
   font-family: "pokeFont_solid";
-  src: url(../assets/pokemon_solid.woff) format("woff");
-  src: url(../assets/pokemon_solid.woff2) format("woff2");
+  src: url(../fonts/pokemon_solid.woff) format("woff");
+  src: url(../fonts/pokemon_solid.woff2) format("woff2");
+}
+@font-face {
+  font-family: "game_font";
+  src: url(../fonts/pokemon_generation_1.woff) format("woff");
 }
 html {
   font-size: 125%;
-  font-family: "pokeFont_hollow";
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+}
+
+label[for=search] {
+  font-size: 1.5rem;
 }
 
 .poke_search {
@@ -250,10 +259,12 @@ html {
 }
 .poke_search input[type=text] {
   width: 60%;
+  max-width: 500px;
   height: 40px;
   border: 1px solid #c7a008;
-  max-width: 500px;
+  border-radius: 5px 0 0 5px;
   vertical-align: text-bottom;
+  padding: 0 10px;
 }
 .poke_search button {
   border: 1px solid #c7a008;
@@ -261,7 +272,7 @@ html {
   width: 40px;
   height: 40px;
   vertical-align: text-bottom;
-  margin-left: -5px;
+  margin-left: -6px;
   background-color: #ffcb05;
 }
 .poke_search button i {
