@@ -248,3 +248,30 @@ h2 {
   color: lightgoldenrodyellow;
   -webkit-text-stroke: 2px rgb(165, 78, 78);
 }
+
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  list-style: none;
+  text-transform: none;
+  padding-left: 100px;
+  padding-top: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.navBar .pokeBall {
+  padding-right: 50px;
+}
+.navBar a,
+.navBar u {
+  text-decoration: none;
+  color: red;
+  font-size: 25px;
+}

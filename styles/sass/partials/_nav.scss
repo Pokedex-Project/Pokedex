@@ -1,0 +1,26 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+    text-transform: none;
+    padding-left: 100px;
+    padding-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .pokeBall {
+        padding-right: 50px;
+        
+    }
+    
+a,
+    u {
+        text-decoration: none;
+        color: red;
+        font-size: 25px;
+    
+    }
+}
