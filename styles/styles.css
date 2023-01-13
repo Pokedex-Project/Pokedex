@@ -233,7 +233,7 @@ html {
   src: url(../pokemon-fonts/pokemon-solid.woff) format("woff");
   src: url(../pokemon-fonts/pokemon-solid.woff2) format("woff2");
 }
-h1 {
+.pokeLogo {
   font-family: "pokemonFont";
   text-align: center;
   font-size: 800%;
@@ -241,12 +241,12 @@ h1 {
   -webkit-text-stroke: 2px #2a75bb;
 }
 
-h2 {
+h1 {
   font-family: "pokemonFont";
   text-align: center;
   font-size: 500%;
   color: lightgoldenrodyellow;
-  -webkit-text-stroke: 2px rgb(165, 78, 78);
+  -webkit-text-stroke: 2px rgb(205, 32, 32);
 }
 
 .navBar {
@@ -266,12 +266,28 @@ h2 {
   padding-top: 20px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-.navBar .pokeBall {
-  padding-right: 50px;
-}
 .navBar a,
 .navBar u {
   text-decoration: none;
-  color: red;
-  font-size: 25px;
+  color: #ffcb05;
+  padding-right: 50px;
+}
+.navBar .pokeLogo {
+  font-size: 40px;
+}
+
+.menuBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  width: 100%;
+  min-height: 75px;
+  margin: 0 auto;
 }
