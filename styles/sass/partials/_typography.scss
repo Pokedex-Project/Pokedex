@@ -1,0 +1,30 @@
+// Typography Partial
+
+@use 'variables' as *;
+
+@font-face {
+    font-family: 'pokeFont_hollow';
+    src: url(../fonts/pokemon_hollow.woff) format('woff');
+    src: url(../fonts/pokemon_hollow.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'pokeFont_solid';
+    src: url(../fonts/pokemon_solid.woff) format('woff');
+    src: url(../fonts/pokemon_solid.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'game_font';
+    src: url(../fonts/pokemon_generation_1.woff) format('woff');
+}
+
+html{
+    font-size: 125%;
+    font-family: $body_font;
+    color: $body_font_black;
+}
+
+label[for="search"]{
+    font-size: 1.5rem;
+}
