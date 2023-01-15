@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+    text-transform: none;
+    padding-left: 100px;
+    padding-top: 20px;
+    
+    .pokeLogo img{
+        width: 100px;
+    }
+
+    a {
+        text-decoration: none;
+        padding-right: 50px;
+    }
+}
+
+
+
+.menuBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    min-height: 75px;
+    margin-bottom: 100px;
+    padding-left: 1300px;
+    
+
+
+}
+
