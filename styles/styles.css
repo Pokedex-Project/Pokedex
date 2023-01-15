@@ -253,6 +253,10 @@ html {
   font-size: 200%;
 }
 
+.menuBar a {
+  color: #ffcb05;
+}
+
 label[for=search] {
   font-size: 1.5rem;
 }
@@ -317,11 +321,12 @@ label[for=search] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   min-height: 75px;
   margin-bottom: 100px;
   padding-left: 1300px;
+  background-position: absolute;
 }
