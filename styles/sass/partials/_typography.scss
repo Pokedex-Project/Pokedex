@@ -28,3 +28,9 @@ html{
 label[for="search"]{
     font-size: 1.5rem;
 }
+
+.text_container{
+    font-family: $game_font;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
