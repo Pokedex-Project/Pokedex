@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+body {
+    background-color: $background_blue;
+}
+
+.wrapper{
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
