@@ -256,6 +256,18 @@ label[for=search] {
   letter-spacing: 3px;
 }
 
+.contact_page {
+  letter-spacing: 1px;
+}
+.contact_page h1 {
+  font-family: "pokefont_solid";
+  color: #c7a008;
+  font-size: 3rem;
+}
+.contact_page p {
+  line-height: 30px;
+}
+
 body {
   background-color: #c3e7f5;
 }
@@ -341,4 +353,73 @@ body {
 }
 .poke_search button i {
   font-size: 20px;
+}
+
+.contact_page {
+  border: 5px inset #c7a008;
+  border-radius: 20px;
+  padding: 50px;
+  width: 60%;
+}
+.contact_page .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contact_page .header h1 {
+  margin: 0;
+}
+.contact_page .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact_page .contact .flex {
+  width: 70%;
+}
+.contact_page .contact .flex form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .info div,
+.message_container,
+.button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact .info div input,
+.message_container input,
+.button_container input {
+  width: 60%;
+}
+
+.media_links {
+  width: 30%;
+}
+.media_links .contact_info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.media_links .contact_info div p {
+  margin: 0;
 }

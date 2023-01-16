@@ -11,11 +11,14 @@
 <body>
     <main>
         <section class="contact_page wrapper">
-            <h1>Contact Us</h1>
+            <div class="header">
+                <img src="./assets/icons8_pokedex_pikachu_icon.png" alt="Picture of the pokemon Pikachu">
+                <h1>Contact Us</h1>
+            </div>
             <p>Have any questions about our project? Want to get in touch with the creators of this site? Don't hesitate to send us a message and we will be sure to get back to you as soon as possible!</p>
 
             <div class="contact">
-                <div>
+                <div class="flex">
                     <form action="submit" class="send_message" id="form_1">
                         <div class="info">
                             <div class="name_container">
@@ -36,7 +39,7 @@
                             </div>
                         </div>
                         <div class="message_container">
-                            <label for="message"></label>
+                            <label for="message">Message</label>
                             <textarea id="message" name="message" cols="40" rows="8" placeholder="Here goes your comment..." required></textarea>
                         </div>
                         <div class="button_container">
@@ -48,32 +51,40 @@
                 <div class="media_links">
                     <h2>Media Links</h2>
                     <div class="facebook">
-                        <div>
-                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-                        </div>
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
                         <a href="https://www.facebook.com">Facebook</a>
                     </div>
 
                     <div class="instagram">
-                        <div>
-                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                        </div>
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                         <a href="https://www.instagram.com">Instagram</a>
                     </div>
 
                     <div class="twitter">
-                        <div>
-                            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-                        </div>
+                        <i class="fa-brands fa-twitter" aria-hidden="true"></i>
                         <a href="https://www.twitter.com">Twitter</a>
                     </div>
 
                     <div class="linkedin">
-                        <div>
-                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-                        </div>
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                         <a href="https://www.linkedin.com">LinkedIn</a>
                     </div>
+
+                    <div class="contact_info">
+                        <div>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>placeholder</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+1-234-567-8910</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>contact-info@gmail.com</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
