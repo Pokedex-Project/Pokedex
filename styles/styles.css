@@ -302,8 +302,6 @@ label[for=search] {
   left: 0;
   list-style: none;
   text-transform: none;
-  padding-left: 100px;
-  padding-top: 20px;
 }
 .navBar .pokeLogo img {
   width: 100px;
@@ -327,6 +325,6 @@ label[for=search] {
   width: 100%;
   min-height: 75px;
   margin-bottom: 100px;
-  padding-left: 1300px;
+  padding-left: 1450px;
   background-position: absolute;
 }
