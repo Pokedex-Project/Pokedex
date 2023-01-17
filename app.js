@@ -89,6 +89,8 @@ pokeDex.searchBar = (poke) => {
 //     });
 // };
 
+// Delete pokemon function incomplete
+
 pokeDex.init = () => {
     pokeDex.getPokemon();
     pokeDex.searchPokemon();

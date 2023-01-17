@@ -1,61 +1,115 @@
 @use 'variables' as *;
 
 @media (max-width: 1000px) {
+    .wrapper{
+        width: 90%;
+    }
+}
 
+@media (max-width: 768px) {
+    .wrapper{
+        width: 95%;
+    }
 
-    footer {
-        .footerCompany {
+    .pokeGallery ol li{
+        margin: 15px 25px;
+    }
+
+    .aboutFlex h1{
+        font-size: 400%;
+        margin: 20px 0;
+    }
+
+    .aboutFlex img{
+        width: 200px;
+    }
+
+    .contactPage{
+
+        .contact{
             flex-direction: column;
             align-items: center;
-            margin-bottom: 100px;
 
+            .mediaLinks {
+                margin-top: 30px;
+            }
 
-        }
-
-        .footerColumnSocial {
-            width: 80%;
-
-            h2 {
-                p {
-                    width: auto;
-                }
+            form,
+            .mediaLinks {
+                width: 80%;
             }
         }
     }
 }
 
-@media (max-width: 800px) {}
+@media (max-width: 480px) {
+    .wrapper{
+        width: 97%;
+    }
 
-@media (max-width: 500px) {
+    html{
+        font-size: 100%;
+    }
 
+    .navSpace{
+         
+        .menuBar a{
+            padding: 0 10px 0 10px;
+        }
 
-    .navBar {
-        width: 100%;
-
-        .menuBar {
-            a {
-                font-weight: bold;
-                font-size: 1.2rem;
-            }
+        .pokeLogo a{
+            top: 15px;
         }
     }
 
-    footer {
-        .footerCompany {
-            margin-bottom: 60px;
+    .popupContainer .oakContainer {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .textContainer{
+            margin: 0 0 20px 0;
         }
+    }
 
-        .footerColumnSocial {
-            h2 {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+    .searchBar .pokeSearch{
+        padding: 10px;
 
-                p {
-                    margin-bottom: 24px;
-                    width: 100%;
-                }
+        input[type="search"]{
+            width: 70%;
+        }
+    }
+
+    .searchInfo ul li{
+        width: 350px;
+        height: 600px;
+    }
+
+    .contactPage{
+
+        .contact{
+            flex-direction: column;
+            align-items: center;
+
+            .mediaLinks {
+                margin-top: 30px;
             }
+
+            form,
+            .mediaLinks {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .navBar .navSpace{
+        flex-direction: column;
+        align-items: center;
+
+        .pokeLogo{
+            text-align: center;
+            margin: 0 0 0 -150px;
         }
     }
 }
