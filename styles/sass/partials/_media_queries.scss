@@ -1,0 +1,61 @@
+@use 'variables' as *;
+
+@media (max-width: 1000px) {
+
+
+    footer {
+        .footerCompany {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+
+
+        }
+
+        .footerColumnSocial {
+            width: 80%;
+
+            h2 {
+                p {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {}
+
+@media (max-width: 500px) {
+
+
+    .navBar {
+        width: 100%;
+
+        .menuBar {
+            a {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    footer {
+        .footerCompany {
+            margin-bottom: 60px;
+        }
+
+        .footerColumnSocial {
+            h2 {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+
+                p {
+                    margin-bottom: 24px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
