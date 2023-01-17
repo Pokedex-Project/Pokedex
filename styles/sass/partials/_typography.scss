@@ -25,7 +25,8 @@ html{
     color: $bodyFontBlack;
 }
 
-.pokeLogo a{
+.pokeLogo a,
+.pokeGallery h2{
     -webkit-text-stroke: 2px $pokeLightBlue;
     font-size: 200%;
 }
@@ -37,7 +38,8 @@ h1 {
 
 }
 .pokeLogo a,
-h1 {
+h1,
+.pokeGallery h2{
     font-family: $pokeFontSolid;
     color: $pokeLightYellow;
 }

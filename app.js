@@ -9,7 +9,7 @@ const getPokemon = () => {
 
     const pokeDex = [];
 
-    for (let i = 1; i <= 151; i++) {
+    for (let i = 1; i <= 12; i++) {
         pokeDex.push(getPokemonByNum(i));
 
     }
@@ -36,7 +36,7 @@ const showPokemon = (pokeDex) => {
         imageElement.alt = poke.image.title;
         listElement.appendChild(imageElement);
         olElement.appendChild(listElement);
-    })
-}
+    });
+};
 
 getPokemon();   
