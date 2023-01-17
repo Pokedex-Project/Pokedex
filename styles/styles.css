@@ -366,6 +366,15 @@ body {
   border: 5px inset grey;
 }
 
+.aboutTitle {
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #4c95da;
+  border-radius: 10px;
+  border: 3px #c7a008 solid;
+}
+
 .poke_search {
   text-align: center;
   margin: 0 auto;
