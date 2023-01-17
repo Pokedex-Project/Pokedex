@@ -9,7 +9,7 @@
     background-color: $poke_light_blue;
     border-radius: 10px; 
     border: 3px $poke_dark_yellow solid;
-    width: 800px;
+    max-width: 1000px;
 
     label[for="search"]{
         display: block;

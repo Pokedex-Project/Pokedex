@@ -5,10 +5,10 @@
 .contact_page {
     border: 5px inset $poke_dark_yellow;
     border-radius: 20px;
-    padding: 50px;
-    width: 60%;
+    padding: 30px;
+    max-width: 1000px;
 
-    .header{
+    .header {
         display: flex;
         justify-content: center;
 
@@ -17,7 +17,7 @@
         }
 
         img{
-            margin-right: 10px;
+            margin-right: 20px;
         }
     }
     p{
@@ -28,13 +28,20 @@
         display: flex;
         justify-content: space-between;
 
-        .flex {
-            width: 70%;
+        form,
+        .media_links{
+            border: 2px solid $poke_dark_yellow;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
 
-            form{
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
+            label{
+                margin-top: 10px;
+                margin-bottom: 3px;
             }
         }
     }    
@@ -46,17 +53,66 @@
     display: flex;
     flex-direction: column;
 
+    input,
+    button,
+    textarea{
+        border-radius: 5px;
+        border: 2px solid $poke_dark_blue;
+    }
+
     input{
-        width: 60%;
+        width: 100%;
+    }
+
+    button{
+        width: 150px;
+        height: 50px;
+        margin-top: 10px;
+        background-color: $poke_light_yellow;
     }
 }
 
 .media_links{
-    width: 30%;
+    width: 45%;
+
+    .icons{
+        margin-top: 10px;
+        margin-bottom: 3px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+
+        div{
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            i {
+                border-radius: 3px;
+                align-self: center;
+                width: 30px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: $body_font_black;
+            }
+        }        
+    }
 
     .contact_info{
+        display: flex;
+        flex-direction: column;
+        
         div{
-            display: flex;
+            display:flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            i{
+                width: 30px;
+                height: 20px;
+            }
 
             p{
                 margin: 0;

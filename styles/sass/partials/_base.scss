@@ -1,10 +1,10 @@
 @use 'variables' as *;
 
 body {
-    background-color: $background_blue;
+    background: linear-gradient(270deg, $background_green 0%, $background_blue 100%);
 }
 
-.wrapper{
+.wrapper {
     width: 80%;
     max-width: 1300px;
     margin: 0 auto;
