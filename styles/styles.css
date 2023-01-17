@@ -246,6 +246,25 @@ html {
   color: black;
 }
 
+.pokeLogo a {
+  font-family: "pokefont_solid";
+  -webkit-text-stroke: 2px #4c95da;
+  font-size: 200%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 500%;
+  font-family: "pokefont_solid";
+  -webkit-text-stroke: 2px #4c95da;
+}
+
+.pokeLogo a,
+.menuBar a,
+h1 {
+  color: #ffcb05;
+}
+
 label[for=search] {
   font-size: 1.5rem;
 }
@@ -277,6 +296,45 @@ body {
   width: 80%;
   max-width: 1300px;
   margin: 0 auto;
+}
+
+.navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  top: 0;
+  left: 0;
+  list-style: none;
+  text-transform: none;
+}
+.navBar .pokeLogo img {
+  width: 100px;
+}
+.navBar a {
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.menuBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 75px;
+  margin-bottom: 100px;
+  padding-left: 1450px;
+  background-position: absolute;
 }
 
 .popup_container {
@@ -321,6 +379,15 @@ body {
   border: 5px inset grey;
 }
 
+.aboutTitle {
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #4c95da;
+  border-radius: 10px;
+  border: 3px #c7a008 solid;
+}
+
 .poke_search {
   text-align: center;
   margin: 0 auto;
@@ -356,6 +423,7 @@ body {
   font-size: 20px;
 }
 
+
 .contact_page {
   border: 5px inset #c7a008;
   border-radius: 20px;
@@ -363,6 +431,15 @@ body {
   max-width: 1000px;
 }
 .contact_page .header {
+
+.footerCompany {
+  background-color: #3c5aa6;
+  text-transform: uppercase;
+  color: #f6f6f6;
+  font-size: 14px;
+  padding-top: 55px;
+  min-height: 10vh;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,6 +447,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 .contact_page .header h1 {
   margin: 0;
 }
@@ -499,4 +577,9 @@ body {
 }
 .media_links .contact_info div p {
   margin: 0;
+
+
+.footerColumnSocial {
+  position: absolute;
+  margin-top: 50px;
 }

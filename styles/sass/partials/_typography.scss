@@ -25,6 +25,26 @@ html{
     color: $body_font_black;
 }
 
+.pokeLogo a{
+    font-family: $pokefont_solid;
+    -webkit-text-stroke: 2px $poke_light_blue;
+    font-size: 200%;
+}
+h1 {
+
+    text-align: center;
+    font-size: 500%;
+    font-family: $pokefont_solid;
+    -webkit-text-stroke: 2px $poke_light_blue;
+
+}
+.pokeLogo a,
+.menuBar a,
+h1 {
+    color: $poke_light_yellow;
+}
+
+
 label[for="search"]{
     font-size: 1.5rem;
 }
