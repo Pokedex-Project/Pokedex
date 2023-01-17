@@ -6,16 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./assets/pokedex_favicon.png">
+    <!-- Pokedex favicon from icons8.com -->
+    <script src="https://kit.fontawesome.com/1f2a91a9e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="pokeShake">
-        <img src="./assets/pokeball-shake.gif" alt="pokeball">
-    
-    </div>
-    <h1>About Us</h1>
-    <div class="aboutTitle">
-        <p>We created this website to help Pokemon trainers all over the world to look up their favourite pokemon from generation 1!</p>
-    </div>
-   
+    <header class="wrapper">
+        <div class="navBar">
+            <nav class="navSpace">
+                <div class="pokeLogo">
+                    <img src="./assets/Pokeball.webp" alt="pokeball">
+                    <a href="./index.html">Pokémon</a>
+                </div>
+                <div class="menuBar">
+                    <a href="./contact.html">Contact</a>
+                    <a href="#about">About</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="aboutFlex">
+            <div class="pokeShake">
+                <img src="./assets/pokeball-shake.gif" alt="pokeball">
+            </div>
+            <h1>About Us</h1>
+        </div>
+        <div class="aboutTitle">
+            <p>We created this website to help Pokemon trainers all over the world to look up their favourite pokemon from generation 1!</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footerFlex">
+            <div class="footerColumnSocial">
+                <a href="https://www.facebook.com"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.twitter.com"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <p class="footerCompany">Copyright - Pokedex 2023</p>
+        </div>
+    </footer>
 </body>
 </html>

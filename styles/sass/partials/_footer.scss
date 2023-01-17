@@ -1,19 +1,38 @@
 @use 'variables' as *;
 
-.footerCompany {
-
+footer{
+    margin-top: 250px;
     background-color: $poke_dark_blue;
-    text-transform: uppercase;
-    color: #f6f6f6;
 
-    font-size: 14px;
-    padding-top: 55px;
-    min-height: 10vh;
-    display: flex;
-    justify-content: center;
+    .footerFlex{
+        display: flex;
+        flex-direction: column;
+        
+        .footerColumnSocial {
+            margin-top: 50px;
+            text-align: center;
+
+            a{
+                color: $body_font_white;
+                margin: 0 20px;
+                transition: 0.5s;
+
+                &:hover,
+                &:focus{
+                    color: $poke_light_yellow;
+                }
+            }
+        }
+
+        .footerCompany {
+            text-transform: uppercase;
+            color: $body_font_white;
+            font-size: 14px;
+            padding-top: 30px;
+            min-height: 10vh;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+    }       
 }
-
- .footerColumnSocial {
-     position: absolute;
-     margin-top: 50px;
- }
