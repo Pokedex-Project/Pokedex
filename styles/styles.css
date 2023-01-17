@@ -280,10 +280,18 @@ label[for=search] {
   font-size: 1.5rem;
 }
 
-.pokedex li {
+.pokedex li,
+.searchInfo ul li {
   font-family: "gameFont";
   line-height: 25px;
   letter-spacing: 2px;
+}
+
+.searchInfo ul li {
+  font-family: "gameFont";
+  line-height: 35px;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
 }
 
 .textContainer {
@@ -445,6 +453,64 @@ header .navBar {
 }
 .pokeSearch button i {
   font-size: 20px;
+}
+
+.searchInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.searchInfo ul li {
+  width: 500px;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.searchInfo ul li:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.searchInfo ul li p {
+  margin: 0;
+  margin-top: 10px;
+  padding: 5px;
+  text-transform: capitalize;
+}
+.searchInfo ul li p span {
+  display: block;
+  font-weight: bold;
+}
+.searchInfo ul li p .idBold {
+  display: inline-block;
+  font-weight: bold;
+}
+.searchInfo ul li img {
+  width: 90%;
 }
 
 .contactPage {
@@ -724,7 +790,7 @@ footer .footerFlex .footerCompany {
   display: inline-block;
   font-weight: bold;
 }
-.pokeGallery ol li:hover, .pokeGallery ol li:focus {
+.pokeGallery ol li:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }

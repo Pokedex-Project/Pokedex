@@ -31,7 +31,7 @@ pokeDex.getPokemon = () => {
 
 pokeDex.showPokemon = (pokemon) => {
     const olElement = document.querySelector('ol');
-    pokeDex.pokemon.forEach((poke) => {
+    pokemon.forEach((poke) => {
         const listElement = document.createElement('li');
         const imageElement = document.createElement('img');
         imageElement.src = poke.image;
@@ -46,36 +46,51 @@ pokeDex.showPokemon = (pokemon) => {
     });
 };
 
-pokeDex.searchBar = (pokemon) => {
-    const ulElement = document.querySelector('ul');
-    const listElement = document.createElement('li');
-    const imageElement = document.createElement('img');
-    imageElement.src = pokemon.image;
-    imageElement.alt = `Official Artwork for pokemon ${pokemon.name}`;
-    listElement.appendChild(imageElement);
-    ulElement.appendChild(listElement);
-    listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${pokemon.id}</p>
-    <img src="${imageElement.src}" alt="${imageElement.alt}">
-    <p class="pokeName"><span>Name:</span> ${pokemon.name}</p>
-    <p class="pokeType"><span>Type:</span> ${pokemon.type}</p>`;
-};
-
-
 pokeDex.searchPokemon = () => {
     const searchInput = document.getElementById('search');
-    searchInput.addEventListener("keyup", (event) => {
+    searchInput.addEventListener("input", (event) => {
         const value = event.target.value;
         const showSearch = pokeDex.pokemon.filter((poke) => {
-            return (poke.name == value || poke.id == value);
-        })
-        console.log(showSearch[0]);
+            if (value === 'undefined') {
+                searchInput[0].innertext = '';
+                console.log(showSearch[0].innerHTML);
+            } else {
+                return (poke.name == value || poke.id == value);
+            };
+        });
         pokeDex.searchBar(showSearch[0]);
+        console.log(showSearch[0]);
+        // pokeDex.deletePokemon(showSearch[0]);
     });
 };
 
+pokeDex.searchBar = (poke) => {
+    const ulElement = document.querySelector('ul');
+    const listElement = document.createElement('li');
+    const imageElement = document.createElement('img');
+    imageElement.src = poke.image;
+    imageElement.alt = `Official Artwork for pokemon ${poke.name}`;
+    listElement.appendChild(imageElement);
+    ulElement.appendChild(listElement);
+    listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
+    <img src="${imageElement.src}" alt="${imageElement.alt}">
+    <p class="pokeName"><span>Name:</span> ${poke.name}</p>
+    <p class="pokeType"><span>Type:</span> ${poke.type}</p>`;
+};
+
+// pokeDex.deletePokemon = () => {
+//     const searchInput = document.getElementById('search');
+//     searchInput.addEventListener("change", (event) => {
+//         const value = event.target.value;
+//         if (value === 'undefined') {
+//             searchInput[0].innerHTML = '';
+//             console.log(showSearch[0].innerHTML);
+//         };
+//     });
+// };
+
 pokeDex.init = () => {
     pokeDex.getPokemon();
-    console.log(pokeDex);
     pokeDex.searchPokemon();
 };
 
