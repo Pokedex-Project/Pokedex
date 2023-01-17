@@ -55,3 +55,16 @@ label[for="search"]{
     letter-spacing: 3px;
 }
 
+.contact_page {
+    letter-spacing: 1px;
+    
+    h1{
+        font-family: $pokefont_solid;
+        color: $poke_dark_yellow;
+        font-size: 3rem;
+    }
+
+    p{
+        line-height: 30px;
+    }
+}

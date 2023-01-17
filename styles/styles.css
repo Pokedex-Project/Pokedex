@@ -275,8 +275,21 @@ label[for=search] {
   letter-spacing: 3px;
 }
 
+.contact_page {
+  letter-spacing: 1px;
+}
+.contact_page h1 {
+  font-family: "pokefont_solid";
+  color: #c7a008;
+  font-size: 3rem;
+}
+.contact_page p {
+  line-height: 30px;
+}
+
 body {
-  background-color: #c3e7f5;
+  background: -webkit-gradient(linear, right top, left top, from(#abd6bc), to(#a6dbf0));
+  background: linear-gradient(270deg, #abd6bc 0%, #a6dbf0 100%);
 }
 
 .wrapper {
@@ -337,8 +350,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
-  background-color: #4c95da;
+  width: 1000px;
+  background-color: #7bb5eb;
   padding: 20px;
   border-radius: 10px;
   border: 3px solid #c7a008;
@@ -379,16 +392,16 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 30px;
-  background-color: #4c95da;
+  background-color: #7bb5eb;
   border-radius: 10px;
   border: 3px #c7a008 solid;
-  width: 800px;
+  max-width: 1000px;
 }
 .poke_search label[for=search] {
   display: block;
   margin: 0 0 10px 0;
 }
-.poke_search input[type=text] {
+.poke_search input[type=search] {
   width: 60%;
   max-width: 500px;
   height: 40px;
@@ -410,6 +423,15 @@ body {
   font-size: 20px;
 }
 
+
+.contact_page {
+  border: 5px inset #c7a008;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 1000px;
+}
+.contact_page .header {
+
 .footerCompany {
   background-color: #3c5aa6;
   text-transform: uppercase;
@@ -417,6 +439,7 @@ body {
   font-size: 14px;
   padding-top: 55px;
   min-height: 10vh;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,6 +447,137 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+.contact_page .header h1 {
+  margin: 0;
+}
+.contact_page .header img {
+  margin-right: 20px;
+}
+.contact_page p {
+  text-align: center;
+}
+.contact_page .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact_page .contact form,
+.contact_page .contact .media_links {
+  border: 2px solid #c7a008;
+  border-radius: 10px;
+  padding: 20px;
+}
+.contact_page .contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+.contact_page .contact form label {
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.contact .info div,
+.message_container,
+.button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contact .info div input,
+.contact .info div button,
+.contact .info div textarea,
+.message_container input,
+.message_container button,
+.message_container textarea,
+.button_container input,
+.button_container button,
+.button_container textarea {
+  border-radius: 5px;
+  border: 2px solid #3c5aa6;
+}
+.contact .info div input,
+.message_container input,
+.button_container input {
+  width: 100%;
+}
+.contact .info div button,
+.message_container button,
+.button_container button {
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
+  background-color: #ffcb05;
+}
+
+.media_links {
+  width: 45%;
+}
+.media_links .icons {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+}
+.media_links .icons div {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.media_links .icons div i {
+  border-radius: 3px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 30px;
+}
+.media_links .icons div a {
+  text-decoration: none;
+  color: black;
+}
+.media_links .contact_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.media_links .contact_info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.media_links .contact_info div i {
+  width: 30px;
+  height: 20px;
+}
+.media_links .contact_info div p {
+  margin: 0;
+
 
 .footerColumnSocial {
   position: absolute;
