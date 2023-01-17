@@ -309,6 +309,14 @@ body {
   background: linear-gradient(270deg, #abd6bc 0%, #a6dbf0 100%);
 }
 
+header .site {
+  margin: 40px 0 80px 0;
+}
+header .navBar {
+  background-color: #3c5aa6;
+  padding-bottom: 30px;
+}
+
 .wrapper {
   width: 80%;
   max-width: 1300px;
@@ -330,7 +338,7 @@ body {
   left: 0;
   list-style: none;
   text-transform: none;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 .navSpace .pokeLogo a,
 .navSpace .menuBar a {
@@ -344,7 +352,7 @@ body {
   color: #c7a008;
 }
 .navSpace .menuBar a {
-  padding-left: 50px;
+  padding: 0 10px 0 50px;
 }
 .navSpace .pokeLogo {
   position: relative;
@@ -664,7 +672,7 @@ footer .footerFlex .footerCompany {
 
 .pokeGallery h2 {
   text-align: center;
-  padding: 100px 0 50px 0;
+  padding: 30px 0 30px 0;
 }
 .pokeGallery ol {
   display: -webkit-box;
