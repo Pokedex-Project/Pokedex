@@ -227,17 +227,17 @@ html {
 }
 
 @font-face {
-  font-family: "pokeFont_hollow";
+  font-family: "pokeFontHollow";
   src: url(../fonts/pokemon_hollow.woff) format("woff");
   src: url(../fonts/pokemon_hollow.woff2) format("woff2");
 }
 @font-face {
-  font-family: "pokeFont_solid";
+  font-family: "pokeFontSolid";
   src: url(../fonts/pokemon_solid.woff) format("woff");
   src: url(../fonts/pokemon_solid.woff2) format("woff2");
 }
 @font-face {
-  font-family: "game_font";
+  font-family: "gameFont";
   src: url(../fonts/pokemon_generation_1.woff) format("woff");
 }
 html {
@@ -259,13 +259,13 @@ h1 {
 
 .pokeLogo a,
 h1 {
-  font-family: "pokefont_solid";
+  font-family: "pokeFontSolid";
   color: #ffcb05;
 }
 
 .menuBar a {
   color: #ffcb05;
-  font-family: "pokefont_solid";
+  font-family: "pokeFontSolid";
   -webkit-text-stroke: 2px #7bb5eb;
   font-size: 150%;
 }
@@ -274,21 +274,21 @@ label[for=search] {
   font-size: 1.5rem;
 }
 
-.text_container {
-  font-family: "game_font";
+.textContainer {
+  font-family: "gameFont";
   line-height: 30px;
   letter-spacing: 3px;
 }
 
-.contact_page {
+.contactPage {
   letter-spacing: 1px;
 }
-.contact_page h1 {
-  font-family: "pokefont_solid";
-  color: #c7a008;
+.contactPage h1 {
+  font-family: "pokeFontSolid";
+  color: #ffcb05;
   font-size: 3rem;
 }
-.contact_page p {
+.contactPage p {
   line-height: 30px;
 }
 
@@ -323,7 +323,16 @@ body {
 .navSpace .pokeLogo a,
 .navSpace .menuBar a {
   text-decoration: none;
-  padding-right: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.navSpace .pokeLogo a:hover, .navSpace .pokeLogo a:focus,
+.navSpace .menuBar a:hover,
+.navSpace .menuBar a:focus {
+  color: #c7a008;
+}
+.navSpace .menuBar a {
+  padding-left: 50px;
 }
 .navSpace .pokeLogo {
   position: relative;
@@ -336,7 +345,7 @@ body {
   width: 80px;
 }
 
-.popup_container {
+.popupContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,7 +354,7 @@ body {
           justify-content: center;
   margin-bottom: 40px;
 }
-.popup_container .oak_container {
+.popupContainer .oakContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,13 +364,13 @@ body {
   border-radius: 10px;
   border: 3px solid #c7a008;
 }
-.popup_container .oak_container .img_container {
+.popupContainer .oakContainer .imgContainer {
   height: 400px;
 }
-.popup_container .oak_container .img_container img {
+.popupContainer .oakContainer .imgContainer img {
   height: 100%;
 }
-.popup_container .oak_container .text_container {
+.popupContainer .oakContainer .textContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +379,7 @@ body {
           align-items: center;
   margin-left: 30px;
 }
-.popup_container .oak_container .text_container p {
+.popupContainer .oakContainer .textContainer p {
   background-color: #dedde0;
   margin: 0;
   padding: 10px;
@@ -378,7 +387,7 @@ body {
   border: 5px inset grey;
 }
 
-.poke_search {
+.pokeSearch {
   text-align: center;
   margin: 0 auto;
   padding: 30px;
@@ -387,11 +396,11 @@ body {
   border: 3px #c7a008 solid;
   max-width: 1000px;
 }
-.poke_search label[for=search] {
+.pokeSearch label[for=search] {
   display: block;
   margin: 0 0 10px 0;
 }
-.poke_search input[type=search] {
+.pokeSearch input[type=search] {
   width: 60%;
   max-width: 500px;
   height: 40px;
@@ -400,7 +409,7 @@ body {
   vertical-align: text-bottom;
   padding: 0 10px;
 }
-.poke_search button {
+.pokeSearch button {
   border: 2px solid #c7a008;
   border-radius: 0 5px 5px 0;
   width: 40px;
@@ -409,17 +418,18 @@ body {
   margin-left: -6px;
   background-color: #ffcb05;
 }
-.poke_search button i {
+.pokeSearch button i {
   font-size: 20px;
 }
 
-.contact_page {
+.contactPage {
   border: 5px inset #c7a008;
   border-radius: 20px;
   padding: 30px;
   max-width: 1000px;
+  margin-top: 150px;
 }
-.contact_page .header {
+.contactPage .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,16 +437,16 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.contact_page .header h1 {
+.contactPage .header h1 {
   margin: 0;
 }
-.contact_page .header img {
+.contactPage .header img {
   margin-right: 20px;
 }
-.contact_page p {
+.contactPage p {
   text-align: center;
 }
-.contact_page .contact {
+.contactPage .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,13 +454,13 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.contact_page .contact form,
-.contact_page .contact .media_links {
+.contactPage .contact form,
+.contactPage .contact .mediaLinks {
   border: 2px solid #c7a008;
   border-radius: 10px;
   padding: 20px;
 }
-.contact_page .contact form {
+.contactPage .contact form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,14 +470,14 @@ body {
           flex-direction: column;
   width: 50%;
 }
-.contact_page .contact form label {
+.contactPage .contact form label {
   margin-top: 10px;
   margin-bottom: 3px;
 }
 
 .contact .info div,
-.message_container,
-.button_container {
+.messageContainer,
+.buttonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,33 +489,42 @@ body {
 .contact .info div input,
 .contact .info div button,
 .contact .info div textarea,
-.message_container input,
-.message_container button,
-.message_container textarea,
-.button_container input,
-.button_container button,
-.button_container textarea {
+.messageContainer input,
+.messageContainer button,
+.messageContainer textarea,
+.buttonContainer input,
+.buttonContainer button,
+.buttonContainer textarea {
   border-radius: 5px;
   border: 2px solid #3c5aa6;
 }
 .contact .info div input,
-.message_container input,
-.button_container input {
+.messageContainer input,
+.buttonContainer input {
   width: 100%;
 }
 .contact .info div button,
-.message_container button,
-.button_container button {
-  width: 150px;
+.messageContainer button,
+.buttonContainer button {
+  width: 160px;
   height: 50px;
   margin-top: 10px;
   background-color: #ffcb05;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.contact .info div button:hover, .contact .info div button:focus,
+.messageContainer button:hover,
+.messageContainer button:focus,
+.buttonContainer button:hover,
+.buttonContainer button:focus {
+  background-color: #c7a008;
 }
 
-.media_links {
+.mediaLinks {
   width: 45%;
 }
-.media_links .icons {
+.mediaLinks .icons {
   margin-top: 10px;
   margin-bottom: 3px;
   display: -webkit-box;
@@ -517,21 +536,26 @@ body {
           flex-direction: column;
   margin-bottom: 50px;
 }
-.media_links .icons div {
+.mediaLinks .icons div {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.media_links .icons div i {
+.mediaLinks .icons div i {
   border-radius: 3px;
   -ms-flex-item-align: center;
       align-self: center;
   width: 30px;
 }
-.media_links .icons div a {
+.mediaLinks .icons div a {
   text-decoration: none;
   color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-.media_links .contact_info {
+.mediaLinks .icons div a:hover, .mediaLinks .icons div a:focus {
+  color: #c7a008;
+}
+.mediaLinks .contactInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -540,7 +564,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.media_links .contact_info div {
+.mediaLinks .contactInfo div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,11 +574,11 @@ body {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.media_links .contact_info div i {
+.mediaLinks .contactInfo div i {
   width: 30px;
   height: 20px;
 }
-.media_links .contact_info div p {
+.mediaLinks .contactInfo div p {
   margin: 0;
 }
 

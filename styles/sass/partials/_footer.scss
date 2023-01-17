@@ -2,7 +2,7 @@
 
 footer{
     margin-top: 250px;
-    background-color: $poke_dark_blue;
+    background-color: $pokeDarkBlue;
 
     .footerFlex{
         display: flex;
@@ -13,20 +13,20 @@ footer{
             text-align: center;
 
             a{
-                color: $body_font_white;
+                color: $bodyFontWhite;
                 margin: 0 20px;
                 transition: 0.5s;
 
                 &:hover,
                 &:focus{
-                    color: $poke_light_yellow;
+                    color: $pokeLightYellow;
                 }
             }
         }
 
         .footerCompany {
             text-transform: uppercase;
-            color: $body_font_white;
+            color: $bodyFontWhite;
             font-size: 14px;
             padding-top: 30px;
             min-height: 10vh;

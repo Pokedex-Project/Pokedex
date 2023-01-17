@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 body {
-    background: linear-gradient(270deg, $background_green 0%, $background_blue 100%);
+    background: linear-gradient(270deg, $backgroundGreen 0%, $backgroundBlue 100%);
 }
 
 .wrapper {

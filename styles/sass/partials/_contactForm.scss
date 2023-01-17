@@ -2,11 +2,12 @@
 
 @use 'variables' as *;
 
-.contact_page {
-    border: 5px inset $poke_dark_yellow;
+.contactPage {
+    border: 5px inset $pokeDarkYellow;
     border-radius: 20px;
     padding: 30px;
     max-width: 1000px;
+    margin-top: 150px;
 
     .header {
         display: flex;
@@ -29,8 +30,8 @@
         justify-content: space-between;
 
         form,
-        .media_links{
-            border: 2px solid $poke_dark_yellow;
+        .mediaLinks{
+            border: 2px solid $pokeDarkYellow;
             border-radius: 10px;
             padding: 20px;
         }
@@ -48,8 +49,8 @@
 }
 
 .contact .info div,
-.message_container,
-.button_container{
+.messageContainer,
+.buttonContainer{
     display: flex;
     flex-direction: column;
 
@@ -57,7 +58,7 @@
     button,
     textarea{
         border-radius: 5px;
-        border: 2px solid $poke_dark_blue;
+        border: 2px solid $pokeDarkBlue;
     }
 
     input{
@@ -65,14 +66,20 @@
     }
 
     button{
-        width: 150px;
+        width: 160px;
         height: 50px;
         margin-top: 10px;
-        background-color: $poke_light_yellow;
+        background-color: $pokeLightYellow;
+        transition: 0.5s;
+
+        &:hover,
+        &:focus{
+            background-color: $pokeDarkYellow;
+        }
     }
 }
 
-.media_links{
+.mediaLinks{
     width: 45%;
 
     .icons{
@@ -94,12 +101,18 @@
             
             a {
                 text-decoration: none;
-                color: $body_font_black;
+                color: $bodyFontBlack;
+                transition: 0.5s;
+
+                &:hover,
+                &:focus{
+                    color: $pokeDarkYellow;
+                }
             }
         }        
     }
 
-    .contact_info{
+    .contactInfo{
         display: flex;
         flex-direction: column;
         

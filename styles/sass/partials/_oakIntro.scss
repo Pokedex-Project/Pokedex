@@ -2,20 +2,20 @@
 
 @use 'variables' as *;
 
-.popup_container{
+.popupContainer{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
 
-    .oak_container {
+    .oakContainer {
         display: flex;
         width: 1000px;
-        background-color: $poke_light_blue;
+        background-color: $pokeLightBlue;
         padding: 20px;
         border-radius: 10px;
-        border: 3px solid $poke_dark_yellow;
+        border: 3px solid $pokeDarkYellow;
         
-        .img_container{
+        .imgContainer{
             height: 400px;
 
             img{
@@ -23,7 +23,7 @@
             }
         }
 
-        .text_container{
+        .textContainer{
             display: flex;
             align-items: center;
             margin-left: 30px;

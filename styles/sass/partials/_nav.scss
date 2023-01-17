@@ -14,7 +14,16 @@
     .pokeLogo a,
     .menuBar a{
         text-decoration: none;
-        padding-right: 50px;
+        transition: 0.5s;
+
+        &:hover,
+        &:focus{
+            color: $pokeDarkYellow;
+        }
+    }
+
+    .menuBar a{
+        padding-left: 50px;
     }
         
     .pokeLogo{

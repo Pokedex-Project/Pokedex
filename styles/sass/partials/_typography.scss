@@ -3,49 +3,49 @@
 @use 'variables' as *;
 
 @font-face {
-    font-family: 'pokeFont_hollow';
+    font-family: 'pokeFontHollow';
     src: url(../fonts/pokemon_hollow.woff) format('woff');
     src: url(../fonts/pokemon_hollow.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'pokeFont_solid';
+    font-family: 'pokeFontSolid';
     src: url(../fonts/pokemon_solid.woff) format('woff');
     src: url(../fonts/pokemon_solid.woff2) format('woff2');
 }
 
 @font-face {
-    font-family: 'game_font';
+    font-family: 'gameFont';
     src: url(../fonts/pokemon_generation_1.woff) format('woff');
 }
 
 html{
     font-size: 125%;
-    font-family: $body_font;
-    color: $body_font_black;
+    font-family: $bodyFont;
+    color: $bodyFontBlack;
 }
 
 .pokeLogo a{
-    -webkit-text-stroke: 2px $poke_light_blue;
+    -webkit-text-stroke: 2px $pokeLightBlue;
     font-size: 200%;
 }
 h1 {
 
     text-align: center;
     font-size: 500%;
-    -webkit-text-stroke: 2px $poke_light_blue;
+    -webkit-text-stroke: 2px $pokeLightBlue;
 
 }
 .pokeLogo a,
 h1 {
-    font-family: $pokefont_solid;
-    color: $poke_light_yellow;
+    font-family: $pokeFontSolid;
+    color: $pokeLightYellow;
 }
 
 .menuBar a{
-    color: $poke_light_yellow;
-    font-family: $pokefont_solid;
-    -webkit-text-stroke: 2px $poke_light_blue;
+    color: $pokeLightYellow;
+    font-family: $pokeFontSolid;
+    -webkit-text-stroke: 2px $pokeLightBlue;
     font-size: 150%;
 }
 
@@ -53,18 +53,18 @@ label[for="search"]{
     font-size: 1.5rem;
 }
 
-.text_container{
-    font-family: $game_font;
+.textContainer{
+    font-family: $gameFont;
     line-height: 30px;
     letter-spacing: 3px;
 }
 
-.contact_page {
+.contactPage {
     letter-spacing: 1px;
     
     h1{
-        font-family: $pokefont_solid;
-        color: $poke_dark_yellow;
+        font-family: $pokeFontSolid;
+        color: $pokeLightYellow;
         font-size: 3rem;
     }
 
