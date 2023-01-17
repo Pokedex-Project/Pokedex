@@ -25,11 +25,16 @@ html{
     color: $bodyFontBlack;
 }
 
-.pokeLogo a,
-.pokeGallery h2{
+.pokeLogo a{
     -webkit-text-stroke: 2px $pokeLightBlue;
     font-size: 200%;
 }
+
+.pokeGallery h2 {
+    -webkit-text-stroke: 2px $pokeLightBlue;
+    font-size: 300%;
+}
+
 h1 {
 
     text-align: center;
@@ -53,6 +58,12 @@ h1,
 
 label[for="search"]{
     font-size: 1.5rem;
+}
+
+.pokedex li{
+    font-family: $gameFont;
+    line-height: 25px;
+    letter-spacing: 2px;
 }
 
 .textContainer{

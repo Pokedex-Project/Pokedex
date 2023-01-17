@@ -33,9 +33,14 @@ const showPokemon = (pokeDex) => {
         const listElement = document.createElement('li');
         const imageElement = document.createElement('img');
         imageElement.src = poke.image;
-        imageElement.alt = poke.image.title;
+        imageElement.alt = `Official Artwork for pokemon ${poke.name}`;
         listElement.appendChild(imageElement);
         olElement.appendChild(listElement);
+        listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
+        <img src="${imageElement.src}" alt="${imageElement.alt}">
+        <p class="pokeName"><span>Name:</span> ${poke.name}</p>
+        <p class="pokeType"><span>Type:</span> ${poke.type}</p>
+        `;
     });
 };
 

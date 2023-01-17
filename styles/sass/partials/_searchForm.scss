@@ -34,6 +34,12 @@
         vertical-align: text-bottom;
         margin-left: -6px;
         background-color: $pokeLightYellow;
+        transition: 0.5s;
+
+        &:hover,
+        &:focus{
+            background-color: $pokeDarkYellow;
+        }
 
         i{
             font-size: 20px;

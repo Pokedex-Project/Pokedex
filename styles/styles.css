@@ -246,10 +246,14 @@ html {
   color: black;
 }
 
-.pokeLogo a,
-.pokeGallery h2 {
+.pokeLogo a {
   -webkit-text-stroke: 2px #7bb5eb;
   font-size: 200%;
+}
+
+.pokeGallery h2 {
+  -webkit-text-stroke: 2px #7bb5eb;
+  font-size: 300%;
 }
 
 h1 {
@@ -274,6 +278,12 @@ h1,
 
 label[for=search] {
   font-size: 1.5rem;
+}
+
+.pokedex li {
+  font-family: "gameFont";
+  line-height: 25px;
+  letter-spacing: 2px;
 }
 
 .textContainer {
@@ -419,6 +429,11 @@ body {
   vertical-align: text-bottom;
   margin-left: -6px;
   background-color: #ffcb05;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.pokeSearch button:hover, .pokeSearch button:focus {
+  background-color: #c7a008;
 }
 .pokeSearch button i {
   font-size: 20px;
@@ -649,7 +664,7 @@ footer .footerFlex .footerCompany {
 
 .pokeGallery h2 {
   text-align: center;
-  padding-top: 100px;
+  padding: 100px 0 50px 0;
 }
 .pokeGallery ol {
   display: -webkit-box;
@@ -667,18 +682,15 @@ footer .footerFlex .footerCompany {
   padding: 0;
 }
 .pokeGallery ol li {
-  width: 200px;
-  height: 400px;
-  /* background-color:darkgrey; */
+  width: 240px;
+  height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -690,9 +702,23 @@ footer .footerFlex .footerCompany {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
+.pokeGallery ol li p {
+  margin: 0;
+  margin-top: 10px;
+  padding: 5px;
+  text-transform: capitalize;
+}
+.pokeGallery ol li p span {
+  display: block;
+  font-weight: bold;
+}
+.pokeGallery ol li p .idBold {
+  display: inline-block;
+  font-weight: bold;
+}
 .pokeGallery ol li:hover, .pokeGallery ol li:focus {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .pokeGallery ol li img {
   margin-top: 10px;

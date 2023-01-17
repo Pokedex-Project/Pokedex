@@ -4,7 +4,7 @@
     
     h2{
         text-align: center;
-        padding-top: 100px;
+        padding: 100px 0 50px 0;
     }
 
     ol{
@@ -16,12 +16,10 @@
         padding: 0;
 
         li{
-            width: 200px;
-            height: 400px;
-            /* background-color:darkgrey; */
+            width: 240px;
+            height: 450px;
             display: flex;
-            justify-content: center;
-            align-items: baseline;
+            flex-direction: column;
             margin: 10px;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 16px;
@@ -31,9 +29,25 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             transition: 0.3s ease-in-out;
 
+            p{
+                margin: 0;
+                margin-top: 10px;
+                padding: 5px;
+                text-transform: capitalize;
+
+                span{
+                    display: block;
+                    font-weight: bold;
+                }
+                .idBold{
+                    display: inline-block;
+                    font-weight: bold;
+                }
+            }
+
             &:hover,
             &:focus{
-                transform:scale(1.1);
+                transform:scale(1.05);
             }
 
             img{
