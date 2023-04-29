@@ -57,16 +57,14 @@ pokeDex.showMore = () => {
         const startIndex = olElement.children.length;
         const endIndex = startIndex + 12;
         pokeDex.showPokemon(pokeDex.pokemon.slice(startIndex, endIndex));
-
-        console.log(olElement.children.length);
     
         if (endIndex >= pokeDex.pokemon.length) {
             loadMoreButton.disabled = true;
-        }
+        };
 
         if (olElement.children.length > 12) {
             loadLessButton.disabled = false;
-        }
+        };
     });
     pokeDex.showLess();
 }
@@ -74,20 +72,25 @@ pokeDex.showMore = () => {
 pokeDex.showLess = () => {
     loadLessButton.addEventListener('click', () => {
         const olElement = document.querySelector('ol');
-        const startIndex = olElement.children.length;
-        const endIndex = startIndex - 12;
+        const startIndex = olElement.children.length;        
+        let endIndex;
+        
+        if (olElement.children.length === 151) {
+            endIndex = startIndex - 7;
+        } else {
+            endIndex = startIndex - 12;
+        };
+
         const removedChildren = Array.from(olElement.children).slice(endIndex, startIndex);
         removedChildren.forEach(child => olElement.removeChild(child));
         
-        console.log(olElement.children.length);
-
         if (olElement.children.length === 12) {
             loadLessButton.disabled = true;
-        }
+        };
 
         if (olElement.children.length < 151) {
             loadMoreButton.disabled = false;
-        }
+        };
     });
 }
 
