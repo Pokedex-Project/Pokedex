@@ -1,5 +1,3 @@
-// Pokedex JavaScript
-
 const pokeDex = {};
 pokeDex.generation = 1;
 pokeDex.numPokemon = 151;
@@ -25,75 +23,78 @@ pokeDex.getPokemon = () => {
                 image: data.sprites.other['official-artwork'].front_default,
                 type: data.types.map((type) => type.type.name).join(', '),
             }));
-            pokeDex.showPokemon(pokeDex.pokemon);
+            pokeDex.showPokemon(pokeDex.pokemon.slice(0, 12));
         });
 }
 
 pokeDex.showPokemon = (pokemon) => {
     const olElement = document.querySelector('ol');
-    pokemon.forEach((poke) => {
+
+    for (let i = 0; i < pokemon.length; i++) {
+        const poke = pokemon[i];
         const listElement = document.createElement('li');
         const imageElement = document.createElement('img');
         imageElement.src = poke.image;
         imageElement.alt = `Official Artwork for pokemon ${poke.name}`;
         listElement.appendChild(imageElement);
-        olElement.appendChild(listElement);
         listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
         <img src="${imageElement.src}" alt="${imageElement.alt}">
         <p class="pokeName"><span>Name:</span> ${poke.name}</p>
         <p class="pokeType"><span>Type:</span> ${poke.type}</p>
         `;
+        olElement.appendChild(listElement);
+    }
+}
+
+const loadMoreButton = document.getElementById('showMore');
+const loadLessButton = document.getElementById('showLess');
+const olElement = document.querySelector('ol');
+loadLessButton.disabled = true;
+
+pokeDex.showMore = () => {
+    loadMoreButton.addEventListener('click', () => {
+        const olElement = document.querySelector('ol');
+        const startIndex = olElement.children.length;
+        const endIndex = startIndex + 12;
+        pokeDex.showPokemon(pokeDex.pokemon.slice(startIndex, endIndex));
+
+        console.log(olElement.children.length);
+    
+        if (endIndex >= pokeDex.pokemon.length) {
+            loadMoreButton.disabled = true;
+        }
+
+        if (olElement.children.length > 12) {
+            loadLessButton.disabled = false;
+        }
     });
-};
+    pokeDex.showLess();
+}
 
-pokeDex.searchPokemon = () => {
-    const searchInput = document.getElementById('search');
-    searchInput.addEventListener("input", (event) => {
-        const value = event.target.value;
-        const showSearch = pokeDex.pokemon.filter((poke) => {
-            if (value === 'undefined') {
-                searchInput[0].innertext = '';
-                console.log(showSearch[0].innerHTML);
-            } else {
-                return (poke.name == value || poke.id == value);
-            };
-        });
-        pokeDex.searchBar(showSearch[0]);
-        console.log(showSearch[0]);
-        // pokeDex.deletePokemon(showSearch[0]);
+pokeDex.showLess = () => {
+    loadLessButton.addEventListener('click', () => {
+        const olElement = document.querySelector('ol');
+        const startIndex = olElement.children.length;
+        const endIndex = startIndex - 12;
+        const removedChildren = Array.from(olElement.children).slice(endIndex, startIndex);
+        removedChildren.forEach(child => olElement.removeChild(child));
+        
+        console.log(olElement.children.length);
+
+        if (olElement.children.length === 12) {
+            loadLessButton.disabled = true;
+        }
+
+        if (olElement.children.length < 151) {
+            loadMoreButton.disabled = false;
+        }
     });
-};
-
-pokeDex.searchBar = (poke) => {
-    const ulElement = document.querySelector('ul');
-    const listElement = document.createElement('li');
-    const imageElement = document.createElement('img');
-    imageElement.src = poke.image;
-    imageElement.alt = `Official Artwork for pokemon ${poke.name}`;
-    listElement.appendChild(imageElement);
-    ulElement.appendChild(listElement);
-    listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
-    <img src="${imageElement.src}" alt="${imageElement.alt}">
-    <p class="pokeName"><span>Name:</span> ${poke.name}</p>
-    <p class="pokeType"><span>Type:</span> ${poke.type}</p>`;
-};
-
-// pokeDex.deletePokemon = () => {
-//     const searchInput = document.getElementById('search');
-//     searchInput.addEventListener("change", (event) => {
-//         const value = event.target.value;
-//         if (value === 'undefined') {
-//             searchInput[0].innerHTML = '';
-//             console.log(showSearch[0].innerHTML);
-//         };
-//     });
-// };
-
-// Delete pokemon function incomplete
+}
 
 pokeDex.init = () => {
     pokeDex.getPokemon();
-    pokeDex.searchPokemon();
+    pokeDex.showMore();
 };
 
 pokeDex.init(); 
+
