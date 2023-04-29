@@ -757,7 +757,7 @@ footer .footerFlex .footerCompany {
   list-style: none;
   padding: 0;
 }
-.pokeGallery ol li {
+.pokeGallery li {
   width: 240px;
   height: 450px;
   display: -webkit-box;
@@ -778,28 +778,57 @@ footer .footerFlex .footerCompany {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.pokeGallery ol li p {
+.pokeGallery li:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.pokeGallery p {
   margin: 0;
   margin-top: 10px;
   padding: 5px;
   text-transform: capitalize;
 }
-.pokeGallery ol li p span {
+.pokeGallery p span {
   display: block;
   font-weight: bold;
 }
-.pokeGallery ol li p .idBold {
+.pokeGallery p .idBold {
   display: inline-block;
   font-weight: bold;
 }
-.pokeGallery ol li:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-.pokeGallery ol li img {
+.pokeGallery img {
   margin-top: 10px;
   width: 100%;
   height: auto;
+}
+.pokeGallery .moreLessContainer {
+  text-align: center;
+}
+.pokeGallery #showMore,
+.pokeGallery #showLess {
+  padding: 15px 35px;
+  margin: 10px 30px;
+  border: 3px solid #3c5aa6;
+  border-radius: 16px;
+  background-color: #7bb5eb;
+  color: white;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.pokeGallery #showMore:hover, .pokeGallery #showMore:focus,
+.pokeGallery #showLess:hover,
+.pokeGallery #showLess:focus {
+  background-color: #3c5aa6;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.pokeGallery #showMore:disabled,
+.pokeGallery #showLess:disabled {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: none;
+          transform: none;
 }
 
 @media (max-width: 1000px) {
@@ -834,7 +863,7 @@ footer .footerFlex .footerCompany {
     margin-top: 30px;
   }
   .contactPage .contact form,
-.contactPage .contact .mediaLinks {
+  .contactPage .contact .mediaLinks {
     width: 80%;
   }
 }
@@ -886,7 +915,7 @@ footer .footerFlex .footerCompany {
     margin-top: 30px;
   }
   .contactPage .contact form,
-.contactPage .contact .mediaLinks {
+  .contactPage .contact .mediaLinks {
     width: 100%;
   }
 }
