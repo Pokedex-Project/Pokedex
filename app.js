@@ -94,9 +94,46 @@ pokeDex.showLess = () => {
     });
 }
 
+pokeDex.searchPokemon = () => {
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', (event) => {
+        const value = event.target.value.toLowerCase();
+        let showSearch = [];
+        if (value === '') {
+            searchInput[0].innerText = '';
+        } else {
+            showSearch = pokeDex.pokemon.filter((poke) => {
+                console.log(value);
+                return (poke.name == value || poke.id == value);
+            });
+        }
+        pokeDex.searchBar(showSearch.length > 0 ? showSearch[0] : null);
+    });
+};
+
+pokeDex.searchBar = (poke) => {
+    const ulElement = document.querySelector('ul');
+    ulElement.innerHTML = '';
+    if (!poke) {
+        searchInput[0].innerText = '';
+        return;
+    }
+    const listElement = document.createElement('li');
+    const imageElement = document.createElement('img');
+    imageElement.src = poke.image;
+    imageElement.alt = `Official Artwork for pokemon ${poke.name}`;
+    listElement.appendChild(imageElement);
+    ulElement.appendChild(listElement);
+    listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
+    <img src="${imageElement.src}" alt="${imageElement.alt}">
+    <p class="pokeName"><span>Name:</span> ${poke.name}</p>
+    <p class="pokeType"><span>Type:</span> ${poke.type}</p>`;
+};
+
 pokeDex.init = () => {
     pokeDex.getPokemon();
     pokeDex.showMore();
+    pokeDex.searchPokemon();
 };
 
 pokeDex.init(); 
