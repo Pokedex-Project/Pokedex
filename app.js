@@ -17,12 +17,20 @@ pokeDex.getPokemon = () => {
 
     Promise.all(pokeDex.pokemon)
         .then((arrayOfPokemon) => {
+            console.log(arrayOfPokemon[0].stats);
             pokeDex.pokemon = arrayOfPokemon.map((data) => ({
                 name: data.name,
                 id: data.id,
                 image: data.sprites.other['official-artwork'].front_default,
                 type: data.types.map((type) => type.type.name).join(', '),
+                hp: data.stats[0].base_stat,
+                attack: data.stats[1].base_stat,
+                defence: data.stats[2].base_stat,
+                special_attack: data.stats[3].base_stat,
+                special_defence: data.stats[4].base_stat,
+                speed: data.stats[5].base_stat,
             }));
+            console.log(pokeDex.pokemon[0]);
             pokeDex.showPokemon(pokeDex.pokemon.slice(0, 12));
         });
 }
@@ -100,10 +108,9 @@ pokeDex.searchPokemon = () => {
         const value = event.target.value.toLowerCase();
         let showSearch = [];
         if (value === '') {
-            searchInput[0].innerText = '';
+            searchInput.innerText = '';
         } else {
             showSearch = pokeDex.pokemon.filter((poke) => {
-                console.log(value);
                 return (poke.name == value || poke.id == value);
             });
         }
@@ -118,16 +125,32 @@ pokeDex.searchBar = (poke) => {
         searchInput[0].innerText = '';
         return;
     }
+    console.log(poke);
     const listElement = document.createElement('li');
     const imageElement = document.createElement('img');
     imageElement.src = poke.image;
     imageElement.alt = `Official Artwork for pokemon ${poke.name}`;
     listElement.appendChild(imageElement);
     ulElement.appendChild(listElement);
-    listElement.innerHTML = `<p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
-    <img src="${imageElement.src}" alt="${imageElement.alt}">
-    <p class="pokeName"><span>Name:</span> ${poke.name}</p>
-    <p class="pokeType"><span>Type:</span> ${poke.type}</p>`;
+    listElement.innerHTML = 
+    `
+    <p class="pokeId"><span class="idBold">ID:</span> ${poke.id}</p>
+    <section class="pokemonStats">
+        <section class="pokeInfo">
+        <img src="${imageElement.src}" alt="${imageElement.alt}">
+        <p class="pokeName"><span>Name:</span> ${poke.name}</p>
+        <p class="pokeType"><span>Type:</span> ${poke.type}</p>
+        </section>
+        <section class="pokeStats">
+        <p><span>HP:</span> ${poke.hp}</p>
+        <p><span>Attack:</span> ${poke.attack}</p>
+        <p><span>Defence:</span> ${poke.defence}</p>
+        <p><span>Sp. Atk:</span> ${poke.special_attack}</p>
+        <p><span>Sp. Def:</span> ${poke.special_defence}</p>
+        <p><span>Speed:</span> ${poke.speed}</p>
+        </section>
+    </section>
+    `;
 };
 
 pokeDex.init = () => {

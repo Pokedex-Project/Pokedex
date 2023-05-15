@@ -9,12 +9,12 @@
     left: 0;
     list-style: none;
     text-transform: none;
-    padding-top: 30px;
+    padding-top: 0;
 
     .pokeLogo a,
     .menuBar a{
         text-decoration: none;
-        transition: 0.5s;
+        transition: 0.3s;
 
         &:hover,
         &:focus{
@@ -23,7 +23,7 @@
     }
 
     .menuBar a{
-        padding: 0 10px 0 50px;
+        margin: 0 20px;
     }
         
     .pokeLogo{
@@ -31,11 +31,12 @@
 
         a{
            position: absolute;
-           top: 7px; 
+           top: 10px; 
         }
         
         img{
-            width: 80px;
+            width: 70px;
+            margin-top: 5px;
         }
     }
 }

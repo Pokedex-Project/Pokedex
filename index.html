@@ -5,6 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./styles/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+	<!-- Embedded font from Google Fonts -->
 	<link rel="icon" href="./assets/pokedex_favicon.png">
 	<!-- Pokedex favicon from icons8.com -->
 	<script src="https://kit.fontawesome.com/1f2a91a9e1.js" crossorigin="anonymous"></script>
@@ -28,24 +32,26 @@
 	</header>
 	
 	<main>
-		<section class="profIntro wrapper">
-			<div class="popupContainer">
-				<div class="oakContainer">
-					<div class="imgContainer">
-						<img src="./assets/pokedex_prof_oak.png" alt="Image of Professor Oak holding pokemon tablet">
-					</div>
-					<div class="textContainer">
-						<p>Hello there trainer! Welcome to the world of Pokemon. My name is Oak. People call me the Pokemon professor! Use the search bar below to find any of the Pokemon from Generation 1 or scroll through the Poke-gallery!</p>
+		<section class="mainContainer">
+			<div class="profIntro wrapper">
+				<div class="popupContainer">
+					<div class="oakContainer">
+						<div class="imgContainer">
+							<img src="./assets/pokedex_prof_oak.png" alt="Image of Professor Oak holding pokemon tablet">
+						</div>
+						<div class="textContainer">
+							<p>Hello there trainer! Welcome to the world of Pokemon. My name is Oak. People call me the Pokemon professor! Use the search bar below to find any of the Pokemon from Generation 1 or scroll through the Poke-gallery!</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<section class="searchBar wrapper">
-			<form class="pokeSearch" action="search..." onsubmit="return false;">
-				<label for="search">Search by Name or ID Number (1 - 151)</label>
-				<input type="search" id="search" name="search" placeholder="type here..." required data-search>
-			</form>
+			<div class="searchBar wrapper">
+				<form class="pokeSearch" action="search..." onsubmit="return false;">
+					<label for="search">Search by Name or ID Number (1 - 151)</label>
+					<input type="search" id="search" name="search" placeholder="type here..." required data-search>
+				</form>
+			</div>
 		</section>
 
 		<section class="searchInfo">

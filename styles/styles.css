@@ -242,38 +242,36 @@ html {
 }
 html {
   font-size: 125%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Rajdhani", sans-serif;
   color: black;
 }
 
 .pokeLogo a {
-  -webkit-text-stroke: 2px #7bb5eb;
-  font-size: 200%;
-}
-
-.pokeGallery h2 {
-  -webkit-text-stroke: 2px #7bb5eb;
-  font-size: 300%;
-}
-
-h1 {
-  text-align: center;
-  font-size: 500%;
-  -webkit-text-stroke: 2px #7bb5eb;
-}
-
-.pokeLogo a,
-h1,
-.pokeGallery h2 {
   font-family: "pokeFontSolid";
   color: #ffcb05;
 }
 
 .menuBar a {
-  color: #ffcb05;
-  font-family: "pokeFontSolid";
-  -webkit-text-stroke: 2px #7bb5eb;
-  font-size: 150%;
+  color: white;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.pokeLogo a {
+  -webkit-text-stroke: 3px #3c5aa6;
+  font-size: 180%;
+}
+
+.pokeGallery h2 {
+  font-size: 3rem;
 }
 
 label[for=search] {
@@ -295,9 +293,11 @@ label[for=search] {
 }
 
 .textContainer {
-  font-family: "gameFont";
-  line-height: 30px;
-  letter-spacing: 3px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .contactPage {
@@ -313,22 +313,45 @@ label[for=search] {
 }
 
 body {
-  background: -webkit-gradient(linear, right top, left top, from(#abd6bc), to(#a6dbf0));
-  background: linear-gradient(270deg, #abd6bc 0%, #a6dbf0 100%);
+  background: rgb(128, 128, 128);
 }
 
 header .site {
-  margin: 40px 0 80px 0;
+  margin: 20px 0 20px 0;
 }
 header .navBar {
-  background-color: #3c5aa6;
+  background-color: black;
   padding-bottom: 30px;
+  height: 80px;
+  border-bottom: 3px solid rgb(128, 128, 128);
 }
 
 .wrapper {
   width: 80%;
   max-width: 1300px;
   margin: 0 auto;
+}
+
+.mainContainer {
+  height: 500px;
+  width: 800px;
+  border-radius: 16px;
+  border: 3px #c7a008 solid;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgb(214, 214, 214);
 }
 
 .navSpace {
@@ -346,13 +369,13 @@ header .navBar {
   left: 0;
   list-style: none;
   text-transform: none;
-  padding-top: 30px;
+  padding-top: 0;
 }
 .navSpace .pokeLogo a,
 .navSpace .menuBar a {
   text-decoration: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .navSpace .pokeLogo a:hover, .navSpace .pokeLogo a:focus,
 .navSpace .menuBar a:hover,
@@ -360,17 +383,18 @@ header .navBar {
   color: #c7a008;
 }
 .navSpace .menuBar a {
-  padding: 0 10px 0 50px;
+  margin: 0 20px;
 }
 .navSpace .pokeLogo {
   position: relative;
 }
 .navSpace .pokeLogo a {
   position: absolute;
-  top: 7px;
+  top: 10px;
 }
 .navSpace .pokeLogo img {
-  width: 80px;
+  width: 70px;
+  margin-top: 5px;
 }
 
 .popupContainer {
@@ -380,20 +404,17 @@ header .navBar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 40px;
 }
 .popupContainer .oakContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1000px;
-  background-color: #7bb5eb;
+  width: 650px;
   padding: 20px;
   border-radius: 10px;
-  border: 3px solid #c7a008;
 }
 .popupContainer .oakContainer .imgContainer {
-  height: 400px;
+  height: 250px;
 }
 .popupContainer .oakContainer .imgContainer img {
   height: 100%;
@@ -405,37 +426,59 @@ header .navBar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 .popupContainer .oakContainer .textContainer p {
   background-color: #dedde0;
   margin: 0;
   padding: 10px;
   border-radius: 0 20px 20px 20px;
-  border: 5px inset grey;
+  border: 5px ridge black;
 }
 
 .pokeSearch {
   text-align: center;
   margin: 0 auto;
-  padding: 30px;
-  background-color: #7bb5eb;
-  border-radius: 10px;
-  border: 3px #c7a008 solid;
-  max-width: 1000px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 20px;
+  border: 5px groove black;
+  max-width: 600px;
 }
 .pokeSearch label[for=search] {
   display: block;
   margin: 0 0 10px 0;
+  font-weight: 600;
 }
 .pokeSearch input[type=search] {
   width: 60%;
   max-width: 500px;
   height: 40px;
   border: 2px solid #c7a008;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   vertical-align: text-bottom;
   padding: 0 10px;
+  text-align: center;
+}
+.pokeSearch input[type=search]::-webkit-input-placeholder {
+  text-transform: capitalize;
+  text-align: center;
+}
+.pokeSearch input[type=search]::-moz-placeholder {
+  text-transform: capitalize;
+  text-align: center;
+}
+.pokeSearch input[type=search]:-ms-input-placeholder {
+  text-transform: capitalize;
+  text-align: center;
+}
+.pokeSearch input[type=search]::-ms-input-placeholder {
+  text-transform: capitalize;
+  text-align: center;
+}
+.pokeSearch input[type=search]::placeholder {
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .searchInfo ul {
@@ -453,9 +496,14 @@ header .navBar {
   list-style: none;
   padding: 0;
 }
+.searchInfo ul .pokemonStats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .searchInfo ul li {
-  width: 500px;
-  height: 700px;
+  width: 800px;
+  height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,8 +528,7 @@ header .navBar {
 }
 .searchInfo ul li p {
   margin: 0;
-  margin-top: 10px;
-  padding: 5px;
+  padding: 10px 10px;
   text-transform: capitalize;
 }
 .searchInfo ul li p span {
@@ -493,7 +540,27 @@ header .navBar {
   font-weight: bold;
 }
 .searchInfo ul li img {
-  width: 90%;
+  width: 80%;
+}
+.searchInfo ul .pokeId {
+  background: -webkit-gradient(linear, right top, left top, from(#abd6bc), to(#a6dbf0));
+  background: linear-gradient(270deg, #abd6bc 0%, #a6dbf0 100%);
+  width: 200px;
+  border-radius: 16px 0 16px 0;
+  text-align: center;
+}
+.searchInfo ul .pokeStats,
+.searchInfo ul .pokeInfo {
+  width: 100%;
+  padding: 20px;
+}
+.searchInfo ul .pokeStats p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .contactPage {

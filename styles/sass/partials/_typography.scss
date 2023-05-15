@@ -26,35 +26,32 @@ html{
 }
 
 .pokeLogo a{
-    -webkit-text-stroke: 2px $pokeLightBlue;
-    font-size: 200%;
-}
-
-.pokeGallery h2 {
-    -webkit-text-stroke: 2px $pokeLightBlue;
-    font-size: 300%;
-}
-
-h1 {
-
-    text-align: center;
-    font-size: 500%;
-    -webkit-text-stroke: 2px $pokeLightBlue;
-
-}
-.pokeLogo a,
-h1,
-.pokeGallery h2{
     font-family: $pokeFontSolid;
     color: $pokeLightYellow;
 }
 
 .menuBar a{
-    color: $pokeLightYellow;
-    font-family: $pokeFontSolid;
-    -webkit-text-stroke: 2px $pokeLightBlue;
-    font-size: 150%;
+    color: $bodyFontWhite;
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
 }
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+}
+.pokeLogo a{
+    -webkit-text-stroke: 3px $pokeDarkBlue;
+    font-size: 180%;
+}
+
+.pokeGallery h2 {
+    font-size: 3rem;
+}
+
 
 label[for="search"]{
     font-size: 1.5rem;
@@ -75,9 +72,11 @@ label[for="search"]{
 }
 
 .textContainer{
-    font-family: $gameFont;
-    line-height: 30px;
-    letter-spacing: 3px;
+    font-family: $bodyFont;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
 }
 
 .contactPage {
