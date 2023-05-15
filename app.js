@@ -33,6 +33,11 @@ pokeDex.getPokemon = () => {
         });
 }
 
+const loadMoreButton = document.getElementById('showMore');
+const loadLessButton = document.getElementById('showLess');
+const olElement = document.querySelector('ol');
+loadLessButton.disabled = true;
+
 pokeDex.showPokemon = (pokemon) => {
     const olElement = document.querySelector('ol');
 
@@ -49,13 +54,24 @@ pokeDex.showPokemon = (pokemon) => {
         <p class="pokeType"><span>Type:</span> ${poke.type}</p>
         `;
         olElement.appendChild(listElement);
+
+        pokeDex.pokeType = () => {
+            const type = listElement;
+            const typeText = poke.type;
+            const commaIndex = poke.type.indexOf(', ');
+            let specifiedTextContext = '';
+
+            if (commaIndex !== -1) {
+                specifiedTextContext = typeText.substring(0, commaIndex);
+            } else {
+                specifiedTextContext = typeText;
+            }
+
+            type.classList.add(`${specifiedTextContext}`, 'border');
+        }
+        pokeDex.pokeType();
     }
 }
-
-const loadMoreButton = document.getElementById('showMore');
-const loadLessButton = document.getElementById('showLess');
-const olElement = document.querySelector('ol');
-loadLessButton.disabled = true;
 
 pokeDex.showMore = () => {
     loadMoreButton.addEventListener('click', () => {
@@ -160,14 +176,10 @@ pokeDex.searchBar = (poke) => {
         } else {
             specifiedTextContext = typeText;
         }
-        console.log(specifiedTextContext);
-
         type.classList.add(`${specifiedTextContext}`);
     }
     pokeDex.pokeType();
 };
-
-
 
 pokeDex.init = () => {
     pokeDex.getPokemon();

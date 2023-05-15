@@ -85,7 +85,8 @@
     }
 
     .pokeId{
-        background: linear-gradient(270deg, $backgroundGreen 0%, $backgroundBlue 100%);
+        // background: linear-gradient(270deg, $backgroundGreen 0%, $backgroundBlue 100%);
+        background: $pokeDarkYellow;
         width: 210px;
         border-radius: 5px 0 5px 0;
         text-align: center;
