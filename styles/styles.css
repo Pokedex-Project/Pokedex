@@ -754,7 +754,7 @@ header .navBar {
 }
 
 footer {
-  margin-top: 250px;
+  margin-top: 80px;
   background-color: #3c5aa6;
 }
 footer .footerFlex {
@@ -783,7 +783,7 @@ footer .footerFlex .footerCompany {
   text-transform: uppercase;
   color: white;
   font-size: 14px;
-  padding-top: 30px;
+  padding-top: 20px;
   min-height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -796,7 +796,7 @@ footer .footerFlex .footerCompany {
 
 .pokeGallery h2 {
   text-align: center;
-  padding: 30px 0 30px 0;
+  margin: 60px 0 20px 0;
 }
 .pokeGallery ol {
   display: -webkit-box;

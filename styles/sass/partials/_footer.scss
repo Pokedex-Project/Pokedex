@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 footer{
-    margin-top: 250px;
+    margin-top: 80px;
     background-color: $pokeDarkBlue;
 
     .footerFlex{
@@ -28,7 +28,7 @@ footer{
             text-transform: uppercase;
             color: $bodyFontWhite;
             font-size: 14px;
-            padding-top: 30px;
+            padding-top: 20px;
             min-height: 10vh;
             display: flex;
             justify-content: center;
