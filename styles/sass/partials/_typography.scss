@@ -66,8 +66,8 @@ label[for="search"]{
 
 .searchInfo ul li{
     font-family: $gameFont;
-    line-height: 35px;
-    letter-spacing: 2px;
+    line-height: 50px;
+    letter-spacing: 3px;
     font-size: 1.5rem;
 }
 
@@ -91,4 +91,8 @@ label[for="search"]{
     p{
         line-height: 30px;
     }
+}
+
+.pokeStats{
+    line-height: 70px;
 }

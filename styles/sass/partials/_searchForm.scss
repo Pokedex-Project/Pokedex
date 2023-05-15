@@ -48,7 +48,7 @@
 
     li {
         width: 800px;
-        height: 650px;
+        height: 700px;
         display: flex;
         flex-direction: column;
         margin: 10px;
@@ -57,7 +57,6 @@
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
         transition: 0.3s ease-in-out;
 
         &:hover{
@@ -81,22 +80,28 @@
         }
 
         img{
-            width: 80%;
+            width: 100%;
         }
     }
 
     .pokeId{
         background: linear-gradient(270deg, $backgroundGreen 0%, $backgroundBlue 100%);
-        width: 200px;
-        border-radius: 16px 0 16px 0;
-        // border: 2px solid $pokeLightBlue;
+        width: 210px;
+        border-radius: 5px 0 5px 0;
         text-align: center;
     }
+
     .pokeStats,
     .pokeInfo{
         width: 100%;
         padding: 20px;
     }
+
+    .pokeType,
+    .pokeName{
+        padding: 0;
+    }
+
     .pokeStats p{
         display: flex;
         justify-content: space-between;

@@ -287,8 +287,8 @@ label[for=search] {
 
 .searchInfo ul li {
   font-family: "gameFont";
-  line-height: 35px;
-  letter-spacing: 2px;
+  line-height: 50px;
+  letter-spacing: 3px;
   font-size: 1.5rem;
 }
 
@@ -310,6 +310,10 @@ label[for=search] {
 }
 .contactPage p {
   line-height: 30px;
+}
+
+.pokeStats {
+  line-height: 70px;
 }
 
 body {
@@ -503,7 +507,7 @@ header .navBar {
 }
 .searchInfo ul li {
   width: 800px;
-  height: 650px;
+  height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,7 +522,6 @@ header .navBar {
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -540,19 +543,23 @@ header .navBar {
   font-weight: bold;
 }
 .searchInfo ul li img {
-  width: 80%;
+  width: 100%;
 }
 .searchInfo ul .pokeId {
   background: -webkit-gradient(linear, right top, left top, from(#abd6bc), to(#a6dbf0));
   background: linear-gradient(270deg, #abd6bc 0%, #a6dbf0 100%);
-  width: 200px;
-  border-radius: 16px 0 16px 0;
+  width: 210px;
+  border-radius: 5px 0 5px 0;
   text-align: center;
 }
 .searchInfo ul .pokeStats,
 .searchInfo ul .pokeInfo {
   width: 100%;
   padding: 20px;
+}
+.searchInfo ul .pokeType,
+.searchInfo ul .pokeName {
+  padding: 0;
 }
 .searchInfo ul .pokeStats p {
   display: -webkit-box;
@@ -880,6 +887,78 @@ footer .footerFlex .footerCompany {
   border-color: #7bb5eb;
   -webkit-transform: none;
           transform: none;
+}
+
+.normal {
+  border: 10px solid #A8A77A;
+}
+
+.fire {
+  border: 10px solid #EE8130;
+}
+
+.water {
+  border: 10px solid #6390F0;
+}
+
+.electric {
+  border: 10px solid #F7D02C;
+}
+
+.grass {
+  border: 10px solid #7AC74C;
+}
+
+.ice {
+  border: 10px solid #96D9D6;
+}
+
+.fighting {
+  border: 10px solid #C22E28;
+}
+
+.poison {
+  border: 10px solid #A33EA1;
+}
+
+.ground {
+  border: 10px solid #E2BF65;
+}
+
+.flying {
+  border: 10px solid #A98FF3;
+}
+
+.psychic {
+  border: 10px solid #F95587;
+}
+
+.bug {
+  border: 10px solid #A6B91A;
+}
+
+.rock {
+  border: 10px solid #B6A136;
+}
+
+.ghost {
+  border: 10px solid #735797;
+}
+
+.dragon {
+  border: 10px solid #6F35FC;
+}
+
+.dark {
+  border: 10px solid #705746;
+}
+
+.steel {
+  border: 10px solid #B7B7CE;
+}
+
+.fairy {
+  border: 10px solid #D685AD;
 }
 
 @media (max-width: 1000px) {

@@ -17,7 +17,6 @@ pokeDex.getPokemon = () => {
 
     Promise.all(pokeDex.pokemon)
         .then((arrayOfPokemon) => {
-            console.log(arrayOfPokemon[0].stats);
             pokeDex.pokemon = arrayOfPokemon.map((data) => ({
                 name: data.name,
                 id: data.id,
@@ -30,7 +29,6 @@ pokeDex.getPokemon = () => {
                 special_defence: data.stats[4].base_stat,
                 speed: data.stats[5].base_stat,
             }));
-            console.log(pokeDex.pokemon[0]);
             pokeDex.showPokemon(pokeDex.pokemon.slice(0, 12));
         });
 }
@@ -125,7 +123,6 @@ pokeDex.searchBar = (poke) => {
         searchInput[0].innerText = '';
         return;
     }
-    console.log(poke);
     const listElement = document.createElement('li');
     const imageElement = document.createElement('img');
     imageElement.src = poke.image;
@@ -151,7 +148,26 @@ pokeDex.searchBar = (poke) => {
         </section>
     </section>
     `;
+
+    pokeDex.pokeType = () => {
+        const type = document.querySelector('ul li');
+        const typeText = poke.type;
+        const commaIndex = poke.type.indexOf(', ');
+        let specifiedTextContext = '';
+
+        if (commaIndex !== -1) {
+            specifiedTextContext = typeText.substring(0, commaIndex);
+        } else {
+            specifiedTextContext = typeText;
+        }
+        console.log(specifiedTextContext);
+
+        type.classList.add(`${specifiedTextContext}`);
+    }
+    pokeDex.pokeType();
 };
+
+
 
 pokeDex.init = () => {
     pokeDex.getPokemon();
@@ -160,4 +176,3 @@ pokeDex.init = () => {
 };
 
 pokeDex.init(); 
-
